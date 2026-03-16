@@ -1,12 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
 
 interface ProjectCardProps {
   img: string;
@@ -17,12 +10,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ img, title, desc, href = "#" }: ProjectCardProps) {
   return (
-    <Card
-      color="transparent"
-      shadow={false}
-      className="transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-lg"
-    >
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
+    <div className="rounded-2xl bg-white shadow-lg shadow-gray-200/70 overflow-hidden transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <div className="h-56 w-full overflow-hidden">
         <Image
           src={img}
           alt={title}
@@ -30,26 +19,26 @@ export function ProjectCard({ img, title, desc, href = "#" }: ProjectCardProps) 
           height={768}
           className="h-full w-full object-cover"
         />
-      </CardHeader>
-      <CardBody className="p-0">
+      </div>
+      <div className="p-6">
         <Link
           href={href}
           className="text-blue-gray-900 transition-colors hover:text-gray-800"
         >
-          <Typography variant="h5" className="mb-2">
+          <h5 className="mb-2 text-xl font-semibold leading-snug text-blue-gray-900 line-clamp-2">
             {title}
-          </Typography>
+          </h5>
         </Link>
-        <Typography className="mb-6 font-normal !text-gray-500">
+        <p className="mb-6 text-sm leading-relaxed text-gray-500 line-clamp-4">
           {desc}
-        </Typography>
+        </p>
         <Link href={href}>
-          <Button color="gray" size="sm">
+          <button className="rounded-full bg-gray-900 px-5 py-2.5 text-xs font-bold uppercase text-white transition-colors hover:bg-gray-800">
             see details
-          </Button>
+          </button>
         </Link>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
 
@@ -31,6 +32,35 @@ const PROJECTS = [
 ];
 
 export function Projects() {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const cards = grid.querySelectorAll<HTMLElement>("[data-project-card]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const delay = Number(el.dataset.index ?? 0) * 100;
+            setTimeout(() => {
+              el.classList.add("fade-in-up");
+            }, delay);
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-28 px-8">
       <div className="container mx-auto mb-20 text-center">
@@ -46,9 +76,19 @@ export function Projects() {
           delivered as a Functional Analyst.
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
+      <div
+        ref={gridRef}
+        className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 xl:grid-cols-4"
+      >
         {PROJECTS.map((props, idx) => (
-          <ProjectCard key={idx} {...props} />
+          <div
+            key={idx}
+            data-project-card
+            data-index={idx}
+            className="opacity-0"
+          >
+            <ProjectCard {...props} />
+          </div>
         ))}
       </div>
     </section>
