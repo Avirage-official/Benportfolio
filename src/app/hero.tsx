@@ -3,10 +3,16 @@
 import Image from "next/image";
 import { Input, Button, Typography } from "@material-tailwind/react";
 
+const MAILTO_HREF =
+  "mailto:obajews@hotmail.com?subject=Benportfolio%20%E2%80%93%20Systems%20%26%20Operations%20Discussion";
+
 function Hero() {
   return (
-    <header className="bg-white p-8">
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
+    <header className="relative overflow-hidden bg-white p-8">
+      {/* Subtle radial gradient accent */}
+      <div className="pointer-events-none absolute -top-32 right-0 h-[36rem] w-[36rem] rounded-full bg-gradient-to-br from-blue-50 via-blue-100/40 to-transparent opacity-70 blur-3xl" />
+
+      <div className="container relative mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
         <div className="row-start-2 lg:row-auto">
           <Typography
             variant="h1"
@@ -19,19 +25,17 @@ function Hero() {
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
-            Functional Analyst for AI‑Enabled Operations &amp; Enterprise Systems
+            Functional Analyst for AI-Enabled Operations &amp; Enterprise Systems
           </Typography>
           <Typography
-            variant="lead"
+            variant="paragraph"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
             I&apos;m Benjamin Obaje, a functional analyst who helps organisations
             turn messy processes and disconnected tools into clear, reliable
             systems. I work at the intersection of operations, HRIS, and
-            data—designing workflows, configurations, and AI‑assisted automation
-            that actually fit how people work. On this site you&apos;ll find
-            selected projects that show how I analyse, design, and deliver change
-            across enterprise platforms.
+            data—designing workflows, configurations, and AI-assisted automation
+            that actually fit how people work.
           </Typography>
           <div className="grid">
             <Typography
@@ -42,17 +46,13 @@ function Hero() {
             </Typography>
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
               <Input color="gray" label="Enter your work email" size="lg" />
-              <Button color="gray" className="w-full px-4 md:w-[12rem]">
-                Start a conversation
-              </Button>
+              <a href={MAILTO_HREF}>
+                <Button color="gray" className="w-full px-4 md:w-[12rem]">
+                  Start a conversation
+                </Button>
+              </a>
             </div>
           </div>
-          <Typography variant="small" className="font-normal !text-gray-500">
-            Read my{" "}
-            <a href="#" className="font-medium underline transition-colors">
-              Terms and Conditions
-            </a>
-          </Typography>
         </div>
         <Image
           width={1024}
