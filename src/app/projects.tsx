@@ -6,43 +6,27 @@ import { Typography } from "@material-tailwind/react";
 const PROJECTS = [
   {
     img: "/image/blog-1.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
+    title: "Milestonehub \u2013 AI Project Orchestration Platform",
+    desc: "Concept and architecture for an AI-assisted project orchestration platform that matches projects to the right teams based on skills and availability, guides scoping and delivery, and manages approval workflows end-to-end.",
+    href: "/projects/milestonehub",
   },
   {
     img: "/image/blog2.svg",
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
+    title: "Clubhouse \u2013 People & Culture Intranet",
+    desc: "Intranet concept for companies that brings together clock-in/out, wellbeing tracking, internal links, and social features so HR and leaders can monitor engagement while employees plan lunches, share praise, and coordinate schedules.",
+    href: "/projects/clubhouse",
   },
   {
     img: "/image/blog3.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
+    title: "Vault \u2013 Executive & Investor Control Panel",
+    desc: "Design for a central hub where CEOs and investors see a unified view of company performance, key decisions, portfolio investments, and curated external news, instead of jumping between disconnected tools.",
+    href: "/projects/vault",
   },
   {
     img: "/image/blog4.svg",
-    title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
-  },
-  {
-    img: "/image/blog-1.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: "/image/blog2.svg",
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
-  },
-  {
-    img: "/image/blog3.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: "/image/blog4.svg",
-    title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
+    title: "Enterprise Operations & HRIS Enhancements",
+    desc: "Real-world functional analyst work improving HRIS, payroll, scheduling, and operations: Kronos/UKG and Dynamics for the Uniting Church, pipeline\u2013warehouse\u2013CRM automation for Maximo, and HR apps analysis/UAT at DBS.",
+    href: "/projects/enterprise-ops",
   },
 ];
 
@@ -57,9 +41,9 @@ export function Projects() {
           variant="lead"
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
         >
-          Whether you have a mobile app idea that needs to come to life or a
-          website that requires a facelift, I&apos;m here to turn your digital
-          dreams into reality.
+          From AI-driven platforms to enterprise operations improvements,
+          here are some of the projects I&apos;ve conceptualised, designed, or
+          delivered as a Functional Analyst.
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
