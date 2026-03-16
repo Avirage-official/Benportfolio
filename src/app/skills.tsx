@@ -2,51 +2,51 @@
 
 import { Typography } from "@material-tailwind/react";
 import {
-  RectangleGroupIcon,
-  FingerPrintIcon,
-  SwatchIcon,
-  HashtagIcon,
-  EyeIcon,
+  ClipboardDocumentListIcon,
+  Cog6ToothIcon,
+  SparklesIcon,
+  ChartBarIcon,
+  ShieldCheckIcon,
   DocumentTextIcon,
 } from "@heroicons/react/24/solid";
 import { SkillCard } from "@/components";
 
 const SKILLS = [
   {
-    icon: RectangleGroupIcon,
-    title: "Frontend Web Development:",
+    icon: ClipboardDocumentListIcon,
+    title: "Process & Requirements Analysis",
     children:
-      "Creating beautiful and functional web experiences is my forte. Using the latest technologies and best practices, I design and build websites that captivate and engage users.",
+      "I map messy workflows, interview stakeholders, and translate their needs into clear functional requirements that developers and vendors can build against.",
   },
   {
-    icon: FingerPrintIcon,
-    title: "Mobile App Development",
+    icon: Cog6ToothIcon,
+    title: "Enterprise Systems & HRIS",
     children:
-      " I specialize in creating responsive and intuitive mobile apps that work seamlessly across iOS & Android devices. From concept to deployment, I handle every stage of the development process.",
+      "I configure and improve platforms like Kronos/UKG, Dynamics 365, SAP and SharePoint so they actually support day-to-day operations instead of fighting them.",
   },
   {
-    icon: SwatchIcon,
-    title: "Technology Stack",
+    icon: SparklesIcon,
+    title: "AI & Automation in Operations",
     children:
-      "I'm well-versed in the industry's most popular frontend technologies, including HTML5, CSS3, JavaScript, and frameworks like React and React Native.",
+      "I design where and how to use automation and AI (Power Automate, Python, AI APIs) to remove repetitive work, reduce errors, and support faster decisions.",
   },
   {
-    icon: HashtagIcon,
-    title: " Web Optimization",
+    icon: ChartBarIcon,
+    title: "Data & Decision Intelligence",
     children:
-      "Performance matters. I optimize websites and apps for speed, ensuring your users enjoy a fast and responsive experience, which in turn boosts user satisfaction and SEO rankings.",
+      "I define metrics and build operational dashboards in tools like Power BI so leaders have a clear, live view of workforce and business performance.",
   },
   {
-    icon: EyeIcon,
-    title: "User-Centric Design",
+    icon: ShieldCheckIcon,
+    title: "UAT & Change Management",
     children:
-      "My development goes hand-in-hand with an eye for design. I create user interfaces that are not only functional but also aesthetically pleasing, providing a seamless and enjoyable user journey.",
+      "I plan and facilitate UAT, manage defect triage, and support training so new systems land smoothly and are actually adopted by users.",
   },
   {
     icon: DocumentTextIcon,
-    title: "Testing and Quality Assurance",
+    title: "Governance & Documentation",
     children:
-      "I rigorously test and debug applications to guarantee a bug-free and secure environment for users. Your peace of mind is as important to me as the functionality of your project.",
+      "I write specifications, test cases, and process documentation that keep systems auditable, maintainable, and understandable over time.",
   },
 ];
 
@@ -58,15 +58,14 @@ export function Skills() {
           my skills
         </Typography>
         <Typography variant="h1" color="blue-gray" className="mb-4">
-          What I do
+          How I improve your systems
         </Typography>
         <Typography
           variant="lead"
           className="mx-auto w-full !text-gray-500 lg:w-10/12"
         >
-          I&apos;m not just a developer; I&apos;m a digital dreamweaver.
-          Crafting immersive online experiences is not just a job but my
-          calling. Discover below how I can help you.
+          I bridge the gap between business, operations, and technology. Below
+          is how I typically add value on complex system and process projects.
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
