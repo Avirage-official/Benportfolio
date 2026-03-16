@@ -13,27 +13,37 @@ function Hero() {
             color="blue-gray"
             className="mb-4 lg:text-5xl !leading-tight text-3xl"
           >
-            Welcome to my Web <br /> Development Portofolio!
+            Designing Systems That Make Work Flow
           </Typography>
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
-            I&apos;m Lily Smith, a passionate web developer based in USA. Here,
-            you&apos;ll get a glimpse of my journey in the world of web
-            development, where creativity meets functionality.
+            Functional Analyst for AI‑Enabled Operations &amp; Enterprise Systems
+          </Typography>
+          <Typography
+            variant="lead"
+            className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
+          >
+            I&apos;m Benjamin Obaje, a functional analyst who helps organisations
+            turn messy processes and disconnected tools into clear, reliable
+            systems. I work at the intersection of operations, HRIS, and
+            data—designing workflows, configurations, and AI‑assisted automation
+            that actually fit how people work. On this site you&apos;ll find
+            selected projects that show how I analyse, design, and deliver change
+            across enterprise platforms.
           </Typography>
           <div className="grid">
             <Typography
               variant="small"
               className="mb-2 text-gray-900 font-medium"
             >
-              Your email
+              Let&apos;s talk about your systems
             </Typography>
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-              <Input color="gray" label="Enter your email" size="lg" />
+              <Input color="gray" label="Enter your work email" size="lg" />
               <Button color="gray" className="w-full px-4 md:w-[12rem]">
-                require offer
+                Start a conversation
               </Button>
             </div>
           </div>
@@ -47,8 +57,8 @@ function Hero() {
         <Image
           width={1024}
           height={1024}
-          alt="team work"
-          src="/image/image-7.svg"
+          alt="Benjamin Obaje"
+          src="https://github.com/user-attachments/assets/ba71238a-5160-4880-8280-897ff65d3c8c"
           className="h-[36rem] w-full rounded-xl object-cover"
         />
       </div>
