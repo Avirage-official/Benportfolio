@@ -21,13 +21,13 @@ const NAV_MENU = [
     icon: RectangleStackIcon,
   },
   {
-    name: "Account",
-    icon: UserCircleIcon,
+    name: "Resume",
+    icon: CommandLineIcon,
+    href: "/resume",
   },
   {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
+    name: "Account",
+    icon: UserCircleIcon,
   },
 ];
 
@@ -37,12 +37,13 @@ interface NavItemProps {
 }
 
 function NavItem({ children, href }: NavItemProps) {
+  const isExternal = href?.startsWith("http");
   return (
     <li>
       <Typography
         as="a"
         href={href || "#"}
-        target={href ? "_blank" : "_self"}
+        target={isExternal ? "_blank" : "_self"}
         variant="paragraph"
         color="gray"
         className="flex items-center gap-2 font-medium text-gray-900"
