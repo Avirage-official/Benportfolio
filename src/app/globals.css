@@ -17,3 +17,10 @@
 .fade-in-up {
   animation: fadeInUp 0.5s ease-out forwards;
 }
+
+/* Fallback: show cards immediately when JS is unavailable */
+@media (scripting: none) {
+  [data-project-card] {
+    opacity: 1 !important;
+  }
+}

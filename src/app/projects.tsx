@@ -45,7 +45,7 @@ export function Projects() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
-            const delay = Number(el.dataset.index ?? 0) * 100;
+            const delay = parseInt(el.dataset.index ?? "0", 10) * 100;
             setTimeout(() => {
               el.classList.add("fade-in-up");
             }, delay);
