@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
 
 const CLIENTS = [
-  "maximo-auckland",
-  "uniting-church-australia",
-  "dbs-bank-singapore",
-  "urah-transdermal-singapore",
+  "Maximo (Auckland)",
+  "Uniting Church in Australia (Brisbane)",
+  "DBS Bank (Singapore)",
+  "Urah Transdermal (Singapore)",
 ];
 
 export function Clients() {
@@ -18,15 +17,18 @@ export function Clients() {
           Teams and domains I&apos;ve supported
         </Typography>
         <div className="flex flex-wrap items-center justify-center gap-6">
-          {CLIENTS.map((logo, key) => (
-            <Image
+          {CLIENTS.map((name, key) => (
+            <div
               key={key}
-              alt={logo}
-              width={768}
-              height={768}
-              className="w-40"
-              src={`/logos/logo-${logo}.svg`}
-            />
+              className="flex min-w-[10rem] items-center justify-center rounded-lg border border-blue-gray-50 bg-white px-6 py-4 text-center"
+            >
+              <Typography
+                variant="small"
+                className="font-medium text-blue-gray-700"
+              >
+                {name}
+              </Typography>
+            </div>
           ))}
         </div>
       </div>
