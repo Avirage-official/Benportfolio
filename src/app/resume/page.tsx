@@ -23,7 +23,7 @@ const EXPERIENCE = [
     org: "Maximo Limited, Auckland",
     period: "Jan 2023 \u2013 Mar 2024",
     bullets: [
-      "Automated pipeline-to-warehouse-to-CRM workflows, reducing manual data entry by 40 %.",
+      "Automated pipeline-to-warehouse-to-CRM workflows, reducing manual data entry by 40%.",
       "Gathered requirements and delivered functional specs for SharePoint and ERP integrations.",
     ],
   },
