@@ -3,12 +3,10 @@
 import Image from "next/image";
 import { Input, Button, Typography } from "@material-tailwind/react";
 
-function Hero() {
-  const handleCTA = () => {
-    window.location.href =
-      "mailto:obajews@hotmail.com?subject=Benportfolio%20%E2%80%93%20Systems%20%26%20Operations%20Discussion";
-  };
+const MAILTO_HREF =
+  "mailto:obajews@hotmail.com?subject=Benportfolio%20%E2%80%93%20Systems%20%26%20Operations%20Discussion";
 
+function Hero() {
   return (
     <header className="relative overflow-hidden bg-white p-8">
       {/* Subtle radial gradient accent */}
@@ -48,13 +46,11 @@ function Hero() {
             </Typography>
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
               <Input color="gray" label="Enter your work email" size="lg" />
-              <Button
-                color="gray"
-                className="w-full px-4 md:w-[12rem]"
-                onClick={handleCTA}
-              >
-                Start a conversation
-              </Button>
+              <a href={MAILTO_HREF}>
+                <Button color="gray" className="w-full px-4 md:w-[12rem]">
+                  Start a conversation
+                </Button>
+              </a>
             </div>
           </div>
         </div>
