@@ -109,6 +109,9 @@ const dataTools: ToolItem[] = [
   { name: "Automation tools", icon: CircleStackIcon },
 ];
 
+const ICON_CHIP_CLASS =
+  "inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-700 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-transform transition-shadow cursor-default";
+
 const EDUCATION = [
   "PG Diploma \u2014 Business Admin, Mgmt & Operations (Massey University)",
   "Diploma \u2014 Biomedical / Medical Engineering (Ngee Ann Polytechnic)",
@@ -196,7 +199,7 @@ export default function ResumePage() {
                 business needs and technology solutions across HRIS, workflow
                 automation, and enterprise operations. Hands&#8209;on with
                 platforms such as Microsoft Dynamics, SAP, Kronos/UKG,
-                SharePoint, CRM systems, Power&nbsp;BI, SQL/PostgreSQL, and
+                SharePoint, CRM systems, Power BI, SQL/PostgreSQL, and
                 Excel&#8209;based automation, while actively learning newer
                 AI&#8209;enabled and cloud tools. Known for strong
                 communication, facilitation, and stakeholder engagement, with a
@@ -282,7 +285,7 @@ export default function ResumePage() {
                     return (
                       <span
                         key={tool.name}
-                        className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-700 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-transform transition-shadow cursor-default"
+                        className={ICON_CHIP_CLASS}
                       >
                         <Icon className="h-4 w-4 shrink-0" />
                         {tool.name}
@@ -303,7 +306,7 @@ export default function ResumePage() {
                     return (
                       <span
                         key={tool.name}
-                        className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-700 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-transform transition-shadow cursor-default"
+                        className={ICON_CHIP_CLASS}
                       >
                         <Icon className="h-4 w-4 shrink-0" />
                         {tool.name}
