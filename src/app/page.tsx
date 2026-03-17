@@ -6,8 +6,9 @@ import Hero from "./hero";
 import Clients from "./clients";
 import Skills from "./skills";
 import Projects from "./projects";
+import Milestonehub from "./milestonehub";
 import Resume from "./resume";
-import PopularClients from "./popular-clients";
+import PlatformsAndTools from "./popular-clients";
 import ContactForm from "./contact-form";
 
 export default function Portfolio() {
@@ -18,8 +19,9 @@ export default function Portfolio() {
       <Clients />
       <Skills />
       <Projects />
+      <Milestonehub />
       <Resume />
-      <PopularClients />
+      <PlatformsAndTools />
       <ContactForm />
       <Footer />
     </>
