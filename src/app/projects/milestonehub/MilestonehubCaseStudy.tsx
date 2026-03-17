@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Navbar, Footer } from "@/components";
 import {
@@ -256,7 +256,7 @@ function SwimlaneDiagram({ steps }: { steps: WorkflowStep[] }) {
                 {/* Arrow between steps */}
                 {idx < steps.length - 1 && (
                   <div className="col-span-4 flex justify-center -my-1">
-                    <svg width="20" height="16" viewBox="0 0 20 16" className="text-indigo-300">
+                    <svg width="20" height="16" viewBox="0 0 20 16" className="text-indigo-300" aria-hidden="true">
                       <path d="M10 0 L10 12 M5 8 L10 14 L15 8" stroke="currentColor" fill="none" strokeWidth="1.5" />
                     </svg>
                   </div>
@@ -280,11 +280,6 @@ export default function MilestonehubCaseStudy() {
   const [productTab, setProductTab] = useState<
     "overview" | "matching" | "portfolio"
   >("overview");
-
-  // Set document title for SEO (since metadata is on server component)
-  useEffect(() => {
-    document.title = "Milestonehub – AI Project Orchestration Platform";
-  }, []);
 
   const workflowSteps =
     workflowTab === "current"
