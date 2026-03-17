@@ -38,19 +38,19 @@ export function ContactForm() {
                 variant="lead"
                 className="mx-auto mb-8 text-base !text-gray-500"
               >
-                Fill up the form and our Team will get back to you within 24
+                Fill up the form and I  will get back to you within 24
                 hours.
               </Typography>
               <div className="flex gap-5">
                 <PhoneIcon className="h-6 w-6 text-white" />
                 <Typography variant="h6" color="white" className="mb-2">
-                  +1(424) 535 3523
+                  +65 84404218
                 </Typography>
               </div>
               <div className="flex my-2 gap-5">
                 <EnvelopeIcon className="h-6 w-6 text-white" />
                 <Typography variant="h6" color="white" className="mb-2">
-                  hello@mail.com
+                  Obajews@hotmail.com
                 </Typography>
               </div>
               <div className="flex mb-10 gap-5">
@@ -123,7 +123,7 @@ export function ContactForm() {
                   />
                   <Radio color="gray" name="type" label="Development" />
                   <Radio color="gray" name="type" label="Support" />
-                  <Radio color="gray" name="type" label="Other" />
+                  <Radio color="gray" name="type" label="Analyst" />
                 </div>
                 <Textarea
                   color="gray"
