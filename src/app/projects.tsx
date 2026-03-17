@@ -1,8 +1,32 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
+
+const PROJECT_TABS = [
+  {
+    id: "milestonehub",
+    name: "Milestonehub",
+    href: "/projects/milestonehub",
+  },
+  {
+    id: "clubhouse",
+    name: "Clubhouse \u2013 People & Culture Intranet",
+    href: "/projects/clubhouse",
+  },
+  {
+    id: "vault",
+    name: "Vault \u2013 Executive & Investor Control Panel",
+    href: "/projects/vault",
+  },
+  {
+    id: "enterprise-operations",
+    name: "Enterprise Operations & HRIS Enhancements",
+    href: "/projects/enterprise-ops",
+  },
+];
 
 const PROJECTS = [
   {
@@ -75,6 +99,20 @@ export function Projects() {
           here are some of the projects I&apos;ve conceptualised, designed, or
           delivered as a Functional Analyst.
         </Typography>
+      </div>
+      {/* Project tab bar */}
+      <div className="container mx-auto mb-12">
+        <nav className="flex flex-wrap justify-center gap-2">
+          {PROJECT_TABS.map((tab) => (
+            <Link
+              key={tab.id}
+              href={tab.href}
+              className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-900 hover:text-white"
+            >
+              {tab.name}
+            </Link>
+          ))}
+        </nav>
       </div>
       <div
         ref={gridRef}
