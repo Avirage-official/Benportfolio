@@ -4,37 +4,42 @@ const LINKS = ["Home", "About Us", "Blog", "Service"];
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
+  const CURRENT_YEAR = new Date().getFullYear();
+
   return (
-    <footer className="mt-10 px-8 pt-20">
-      <div className="container mx-auto">
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 border-t border-gray-200 py-6 md:justify-between">
-          <Typography className="text-center font-normal !text-gray-700">
-            &copy; {CURRENT_YEAR} Made with{" "}
-            <a href="https://www.material-tailwind.com" target="_blank">
-              Material Tailwind
-            </a>{" "}
-            by{" "}
-            <a href="https://www.creative-tim.com" target="_blank">
-              Creative Tim
+    <footer className="mt-10 px-8 pt-10 pb-6 border-t border-gray-200">
+      <div className="container mx-auto flex flex-col items-center justify-between gap-y-4 md:flex-row">
+        <p className="text-sm text-gray-600 text-center md:text-left">
+          &copy; {CURRENT_YEAR} Benjamin Obaje. All rights reserved.
+        </p>
+        <ul className="flex items-center gap-6 text-sm text-gray-600">
+          <li>
+            <a
+              href="mailto:obajews@hotmail.com"
+              className="hover:text-gray-900 transition-colors"
+            >
+              Contact
             </a>
-            .
-          </Typography>
-          <ul className="flex gap-8 items-center">
-            {LINKS.map((link) => (
-              <li key={link}>
-                <Typography
-                  as="a"
-                  href="#"
-                  variant="small"
-                  className="font-normal text-gray-700 hover:text-gray-900 transition-colors"
-                >
-                  {link}
-                </Typography>
-              </li>
-            ))}
-            <Button color="gray">subscribe</Button>
-          </ul>
-        </div>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/benobaje"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-gray-900 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="/resume"
+              className="hover:text-gray-900 transition-colors"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );
