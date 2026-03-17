@@ -4,7 +4,7 @@ import { Typography } from "@material-tailwind/react";
 import { SiSap, SiHubspot, SiPostgresql } from "react-icons/si";
 import { FaClock } from "react-icons/fa";
 import {
-  CircleStackIcon,
+  CubeIcon,
   PresentationChartBarIcon,
   TableCellsIcon,
   ShareIcon,
@@ -15,7 +15,7 @@ import type { ComponentType, SVGProps } from "react";
 type HeroIcon = ComponentType<SVGProps<SVGSVGElement> & { className?: string }>;
 
 const PLATFORMS: { name: string; icon: IconType | HeroIcon }[] = [
-  { name: "Microsoft Dynamics 365", icon: CircleStackIcon },
+  { name: "Microsoft Dynamics 365", icon: CubeIcon },
   { name: "SAP", icon: SiSap },
   { name: "Kronos / UKG", icon: FaClock },
   { name: "SharePoint", icon: ShareIcon },
@@ -41,7 +41,7 @@ export function PlatformsAndTools() {
           {PLATFORMS.map(({ name, icon: Icon }) => (
             <div
               key={name}
-              className="flex flex-col items-center gap-2 rounded-lg border border-blue-gray-50 bg-white px-6 py-5 text-center text-gray-600 transition-transform transition-colors hover:-translate-y-1 hover:text-gray-900"
+              className="flex flex-col items-center gap-2 rounded-lg border border-blue-gray-50 bg-white px-6 py-5 text-center text-gray-600 transition-all hover:-translate-y-1 hover:text-gray-900"
             >
               <Icon className="h-8 w-8" />
               <Typography
