@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar, Footer } from "@/components";
 
 export const metadata = {
@@ -9,6 +10,12 @@ export default function MilestonehubPage() {
     <>
       <Navbar />
       <section className="container mx-auto px-8 py-28">
+        <Link
+          href="/#projects"
+          className="mb-6 inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+        >
+          &larr; Back to Projects
+        </Link>
         <h2 className="mb-4 text-3xl font-bold text-blue-gray-900">
           Milestonehub &ndash; AI Project Orchestration Platform
         </h2>

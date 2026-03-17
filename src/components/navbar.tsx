@@ -23,7 +23,7 @@ const NAV_MENU = [
   {
     name: "Projects",
     icon: RectangleStackIcon,
-    href: "#projects",
+    href: "/#projects",
   },
   {
     name: "Resume",
