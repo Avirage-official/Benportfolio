@@ -6,8 +6,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
+  HomeIcon,
   RectangleStackIcon,
-  UserCircleIcon,
   CommandLineIcon,
   XMarkIcon,
   Bars3Icon,
@@ -16,17 +16,19 @@ import {
 
 const NAV_MENU = [
   {
-    name: "Page",
+    name: "Home",
+    icon: HomeIcon,
+    href: "/",
+  },
+  {
+    name: "Projects",
     icon: RectangleStackIcon,
+    href: "#projects",
   },
   {
     name: "Resume",
     icon: CommandLineIcon,
     href: "/resume",
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
   },
 ];
 
