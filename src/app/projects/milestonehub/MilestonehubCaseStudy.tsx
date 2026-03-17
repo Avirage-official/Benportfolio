@@ -147,7 +147,7 @@ const FUTURE_STATE_STEPS: WorkflowStep[] = [
   },
   {
     lane: "Milestonehub",
-    title: "Classify &amp; estimate",
+    title: "Classify & estimate",
     description: "AI classifies initiative type and estimates complexity",
   },
   {
@@ -157,12 +157,12 @@ const FUTURE_STATE_STEPS: WorkflowStep[] = [
   },
   {
     lane: "Delivery team",
-    title: "Review &amp; confirm",
+    title: "Review & confirm",
     description: "Review scope and confirm feasibility before commitment",
   },
   {
     lane: "Leadership",
-    title: "Approve scope &amp; budget",
+    title: "Approve scope & budget",
     description: "Approve scope, budget, and timelines in one place",
   },
   {
@@ -180,7 +180,7 @@ const GOVERNANCE_STEPS: WorkflowStep[] = [
   },
   {
     lane: "Milestonehub",
-    title: "Enforce RBAC &amp; chains",
+    title: "Enforce RBAC & chains",
     description: "Enforce role-based access and approval chains",
   },
   {
