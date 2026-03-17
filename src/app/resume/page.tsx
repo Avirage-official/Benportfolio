@@ -3,6 +3,21 @@
 import { useEffect, useRef } from "react";
 import { Navbar, Footer } from "@/components";
 import { Typography } from "@material-tailwind/react";
+import {
+  SiSap,
+  SiPostgresql,
+  SiPython,
+} from "react-icons/si";
+import { IconType } from "react-icons";
+import {
+  CogIcon,
+  CircleStackIcon,
+  BuildingOffice2Icon,
+  ClockIcon,
+  ChartBarIcon,
+  TableCellsIcon,
+  ShareIcon,
+} from "@heroicons/react/24/outline";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -70,16 +85,29 @@ const SKILLS = {
     "Change management",
     "Stakeholder engagement",
   ],
-  Enterprise: ["Kronos/UKG", "SAP", "Dynamics 365", "SharePoint"],
-  "Data & AI": [
-    "Power BI",
-    "SQL/PostgreSQL",
-    "Excel",
-    "Python",
-    "Automation tools",
-  ],
   Methods: ["Agile/Scrum", "ITIL", "BPM"],
 };
+
+interface ToolItem {
+  name: string;
+  icon: IconType | React.ComponentType<{ className?: string }>;
+}
+
+const enterpriseTools: ToolItem[] = [
+  { name: "Microsoft Dynamics", icon: CogIcon },
+  { name: "SAP", icon: SiSap },
+  { name: "Kronos/UKG", icon: ClockIcon },
+  { name: "SharePoint", icon: ShareIcon },
+  { name: "CRM Platforms", icon: BuildingOffice2Icon },
+];
+
+const dataTools: ToolItem[] = [
+  { name: "Power BI", icon: ChartBarIcon },
+  { name: "SQL / PostgreSQL", icon: SiPostgresql },
+  { name: "Excel automation", icon: TableCellsIcon },
+  { name: "Python", icon: SiPython },
+  { name: "Automation tools", icon: CircleStackIcon },
+];
 
 const EDUCATION = [
   "PG Diploma \u2014 Business Admin, Mgmt & Operations (Massey University)",
@@ -165,11 +193,15 @@ export default function ResumePage() {
               </Typography>
               <Typography className="font-normal !text-gray-500 leading-relaxed">
                 Functional Analyst with 3+ years&rsquo; experience bridging
-                business needs and technology solutions. Background spanning
-                operations, HRIS, workflow automation, and data/BI. Currently
-                focused on AI-enabled operations and decision intelligence,
-                helping organisations turn complex processes into streamlined,
-                data-driven workflows.
+                business needs and technology solutions across HRIS, workflow
+                automation, and enterprise operations. Hands&#8209;on with
+                platforms such as Microsoft Dynamics, SAP, Kronos/UKG,
+                SharePoint, CRM systems, Power&nbsp;BI, SQL/PostgreSQL, and
+                Excel&#8209;based automation, while actively learning newer
+                AI&#8209;enabled and cloud tools. Known for strong
+                communication, facilitation, and stakeholder engagement, with a
+                high willingness to learn, adapt quickly, and collaborate to
+                turn complex processes into clear, reliable systems.
               </Typography>
             </div>
 
@@ -219,6 +251,8 @@ export default function ResumePage() {
               >
                 Key Skills
               </Typography>
+
+              {/* Functional & Methods — plain chips */}
               {Object.entries(SKILLS).map(([group, items]) => (
                 <div key={group} className="mb-4">
                   <Typography className="text-sm font-semibold text-gray-700 mb-1">
@@ -236,6 +270,48 @@ export default function ResumePage() {
                   </div>
                 </div>
               ))}
+
+              {/* Enterprise — icon cards */}
+              <div className="mb-4">
+                <Typography className="text-sm font-semibold text-gray-700 mb-1">
+                  Enterprise
+                </Typography>
+                <div className="flex flex-wrap gap-2">
+                  {enterpriseTools.map((tool) => {
+                    const Icon = tool.icon;
+                    return (
+                      <span
+                        key={tool.name}
+                        className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-700 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-transform transition-shadow cursor-default"
+                      >
+                        <Icon className="h-4 w-4 shrink-0" />
+                        {tool.name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Data & AI — icon cards */}
+              <div className="mb-4">
+                <Typography className="text-sm font-semibold text-gray-700 mb-1">
+                  Data &amp; AI
+                </Typography>
+                <div className="flex flex-wrap gap-2">
+                  {dataTools.map((tool) => {
+                    const Icon = tool.icon;
+                    return (
+                      <span
+                        key={tool.name}
+                        className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-700 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-transform transition-shadow cursor-default"
+                      >
+                        <Icon className="h-4 w-4 shrink-0" />
+                        {tool.name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
 
             {/* Education */}
