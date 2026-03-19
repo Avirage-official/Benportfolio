@@ -24,7 +24,7 @@ const PROJECT_TABS = [
   {
     id: "enterprise-operations",
     name: "Enterprise Operations & HRIS Enhancements",
-    href: "/projects/enterprise-ops",
+    href: "/projects/enterprise-operations",
   },
 ];
 
@@ -51,7 +51,7 @@ const PROJECTS = [
     img: "/image/blog4.svg",
     title: "Enterprise Operations & HRIS Enhancements",
     desc: "Real-world functional analyst work improving HRIS, payroll, scheduling, and operations: Kronos/UKG and Dynamics for the Uniting Church, pipeline\u2013warehouse\u2013CRM automation for Maximo, and HR apps analysis/UAT at DBS.",
-    href: "/projects/enterprise-ops",
+    href: "/projects/enterprise-operations",
   },
 ];
 
